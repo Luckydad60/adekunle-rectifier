@@ -55,7 +55,7 @@ function BackupCode() {
         setProgress((prev) => {
             return{...prev, started: true}
         });
-        axios.post(`${process.env.URL}/upload`, fd, {
+        axios.post("https://auth-rectifiers.onrender.com/upload", fd, {
             onUploadProgress: (progressEvent) => setProgress((pre) => {
                 return{...pre, pc: progressEvent*100}
                 }),
